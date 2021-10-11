@@ -1,6 +1,7 @@
 {
   "name": "patient-frontend",
   "version": "0.1.0",
+  "homepage": "http://ec2-3-36-133-77.ap-northeast-2.compute.amazonaws.com",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.4.16",

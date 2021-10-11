@@ -8,6 +8,8 @@ export const PhoneInput = ({ phone, setPhone }) => {
         type="tel"
         name="phoneNumber"
         required
+        onInvalid={(e)=>{e.target.setCustomValidity('请填写此字段。')}}
+        oninvalid="this.setCustomValidity('请填写此字段。')"
         className="p-2 w-full border outline-none rounded border-blue-500"
       />
     </div>

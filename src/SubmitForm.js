@@ -19,8 +19,7 @@ function SubmitForm() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
-  const [createRecord, { data: res, loading, error }] =
-    useMutation(CREATE_RECORD);
+  const [createRecord] = useMutation(CREATE_RECORD);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -46,11 +45,13 @@ function SubmitForm() {
       variables: {
         data: fields,
       },
-    }).then((res) => {
-      setSubmitted(true);
-    }).catch((res) => {
-      setSubmitted(true);
-    });
+    })
+      .then((res) => {
+        setSubmitted(true);
+      })
+      .catch((res) => {
+        setSubmitted(true);
+      });
   };
 
   return (
@@ -77,7 +78,7 @@ function SubmitForm() {
                 type="submit"
                 className="px-4 py-1 text-lg rounded bg-blue-500 text-white"
               >
-                Submit
+                完成
               </button>
             </div>
           </form>
